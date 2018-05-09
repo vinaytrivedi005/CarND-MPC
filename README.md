@@ -6,12 +6,17 @@ In this project, I have implemented Model-Predictive-Control to keep the car on 
 
 I have used Kinematic bicycle model. State includes position( x, y), velocity( v), orientation( psi), cross track error and orientation error. Below are the equations used to predict state. 
 
-  // x~t+1~ = x~t~ + v~t~ * cos(psi~t~) * dt
-  // y~t+1~ = y~t~ + v~t~ * sin(psi~t~) * dt
-  // psi~t+1~ = psi~t~ + v~t~ / Lf * delta~t~ * dt
-  // v~t+1~ = v~t~ + a~t~ * dt
-  // cte~t+1~ = f(x~t~) - y~t~ + v~t~ * sin(epsi~t~) * dt
-  // epsi~t+1~ = psi~t~ - psi~des(t)~ + v~t~ * delta~t~ / Lf * dt
+#### x<sub>t+1</sub> = x<sub>t</sub> + v<sub>t</sub> * cos(psi<sub>t</sub>) * dt
+
+#### y<sub>t+1</sub> = y<sub>t</sub> + v<sub>t</sub> * sin(psi<sub>t</sub>) * dt
+
+#### psi<sub>t+1</sub> = psi<sub>t</sub> + v<sub>t</sub> / Lf * delta<sub>t</sub> * dt
+
+#### v<sub>t+1</sub> = v<sub>t</sub> + a<sub>t</sub> * dt
+
+#### cte<sub>t+1</sub> = f(x<sub>t</sub>) - y<sub>t</sub> + v<sub>t</sub> * sin(epsi<sub>t</sub>) * dt
+
+#### epsi<sub>t+1</sub> = psi<sub>t</sub> - psi<sub>des(t)</sub> + v<sub>t</sub> * delta<sub>t</sub> / Lf * dt
   
 ### Timestep Length and Elapsed Duration (N & dt):
 
